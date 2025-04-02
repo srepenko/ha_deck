@@ -21,13 +21,13 @@ LGFX::LGFX(void)
       auto cfg = _bus_instance.config(); // gets the structure for bus settings.
 
       // SPI bus settings
-      cfg.spi_host = SPI2_HOST; // Select SPI to use ESP32-S2,C3: SPI2_HOST or SPI3_HOST / ESP32: VSPI_HOST or HSPI_HOST
+      cfg.spi_host = VSPI_HOST; // Select SPI to use ESP32-S2,C3: SPI2_HOST or SPI3_HOST / ESP32: VSPI_HOST or HSPI_HOST
 
       //* Due to the ESP-IDF upgrade, the description of VSPI_HOST , HSPI_HOST will be deprecated, so if you get an error, use SPI2_HOST , SPI3_HOST instead.
       cfg.spi_mode = 0;          // Set SPI communication mode (0-3) 
       cfg.freq_write = 80000000; // SPI clock on transmission (up to 80MHz, rounded to 80MHz divided by integer)
       cfg.freq_read = 16000000;  // SPI clock on reception
-      cfg.spi_3wire = true;      // Set true when receiving on the MOSI pin
+      cfg.spi_3wire = false;      // Set true when receiving on the MOSI pin
       cfg.use_lock = true;       // set true if transaction lock is used
  
       //  * With the ESP-IDF version upgrade, SPI_DMA_CH_AUTO (automatic setting) of DMA channels is recommended. 
