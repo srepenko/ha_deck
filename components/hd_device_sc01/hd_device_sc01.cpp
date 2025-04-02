@@ -69,7 +69,7 @@ void HaDeckDevice::setup() {
     group = lv_group_create();
     lv_group_set_default(group);
 
-    lcd.setBrightness(brightness_);
+ //   lcd.setBrightness(brightness_);
 
     lv_obj_t * bg_image = lv_img_create(lv_scr_act());
     lv_img_set_src(bg_image, &bg_480x320);
