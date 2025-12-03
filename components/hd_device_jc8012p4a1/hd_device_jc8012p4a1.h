@@ -5,8 +5,8 @@
 #include "esphome/core/log.h"
 #include "lvgl.h"
 #include "pins_config.h"
-#include "src/lcd/jd9365_lcd.h"
-#include "src/touch/gsl3680_touch.h"
+#include "./src/lcd/jd9365_lcd.h"
+#include "./src/touch/gsl3680_touch.h"
 
 
 LV_IMG_DECLARE(bg_1280x800);
