@@ -5,7 +5,7 @@
 #include "esphome/core/log.h"
 #include "lvgl.h"
 #include "pins_config.h"
-#include "hd_device_jc8012p4a1/src/lcd/jd9365_lcd.h"
+#include "jd9365_lcd.h"
 #include "hd_device_jc8012p4a1/src/touch/gsl3680_touch.h"
 
 
